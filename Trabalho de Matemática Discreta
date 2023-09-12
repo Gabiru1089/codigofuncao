@@ -1,0 +1,21 @@
+def f(x):
+    return x**2
+
+def g(x):
+    return x - 1
+
+
+def compor(f, g, x):
+    return f(g(x))
+
+
+x = 4
+funcao_gof = compor(f, g, x)
+funcao_gog = compor(g, g, x)
+funcao_fof = compor(f, f, x)
+funcao_fog = compor(f, g, x)
+
+print("(g ° f)(x) =", funcao_gof)
+print("(g ° g)(x) =", funcao_gog)
+print("(f ° f)(x) =", funcao_fof)
+print("(f ° g)(x) =", funcao_fog)
